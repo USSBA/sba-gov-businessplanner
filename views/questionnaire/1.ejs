@@ -1,0 +1,59 @@
+<% include ../partials/header %>
+
+<!--First page, pre-plan has been generated-->
+
+<div class="ui container">
+    <div class="ui segment">
+        <div class="ui blue progress">
+            <div class="bar" style="width: 15%">
+                <div class="progress"></div>
+            </div>
+        </div>    
+        <div class="ui two column very relaxed grid">
+            <div class="column">
+                <h2>Executive Summary</h2>
+                <p>An executive summary is an introduction to your business. This section should be clear, concise and to the point. We recommend that you revisit this section to review your work after completing the other sections of the business plan to assure consistency and maintain accuracy. The key elements of an executive summary include descriptions of:</p>
+                <ul>
+                    <li>Your company</li>
+                    <li>Products or services you sell</li>
+                    <li>Your audience and ideal customer</li>
+                    <li>Future of your business and your industry</li>
+                </ul>
+                <h4>What will your product be?</h4>
+                <p>Describe your product or service. Briefly make the case for why your product will be successful. How does it fill a customer need? What comparative advantage, if any, does your product/service have?</p>
+            
+                <h4>Who will your customers be?</h4>
+                <p>Describe your targeted customer group and why your product or service will be valuable to them.</p>
+
+                <h4>Why are you creating this company?</h4>
+                <p>Summarize your mission statement.</p>
+
+                <h4>What do you think the future holds for your business and your industry?</h4>
+                <p>Make an educated projection for where you would like to take your company (including new products, cash flow position, market share, or other goals).</p>
+                
+                <div class="row" style="text-align: center">
+                    <a href="/questionnaire/"><button class="ui large blue button" style="margin-top: 1em; position: absolute; bottom: 1rem;"><i class="angle left icon"></i>Start Over</button></a>
+                </div>
+            </div>            
+            <div class="column">
+                <form action="/questionnaire/<%= plan._id %>/2/?_method=PUT" class="ui form" method="POST">
+                    <h3>What products or services will you offer?</h3>
+                    <div class="ui fluid input">
+                        <textarea name="plan[product_or_service]"><%= plan.products_or_service %></textarea>    
+                    </div>
+                    <h3>Who are your target customers?</h3>
+                    <div class="ui fluid input">
+                        <textarea name="plan[target_customers]"><%= plan.target_customers %></textarea>
+                    </div>                    
+                    <h3>What are the company's goals?</h3>
+                    <div class="ui fluid input">
+                        <textarea name="plan[goals]"><%= plan.goals %></textarea>
+                    </div>
+                    <div class="row" style="margin-top: 1em; text-align: center">
+                        <button class="ui large blue button">Next Section<i class="angle right icon"></i></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

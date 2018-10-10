@@ -1,0 +1,220 @@
+<% include ../partials/header %>
+
+<!--Show an individual plan-->
+
+<div class="ui container">
+    
+    <h4 class="ui horizontal divider header">
+      Business Plan Review
+    </h4>
+    <p>Please take a moment to review your answers below. You can always return and modify this plan later.  You can print this page if you would like an easy way to reference your plan.</p>
+    <h4 class="ui horizontal divider header">
+      <i class="briefcase icon"></i>
+      Your Answers
+    </h4>
+      <form action="/plans/<%= plan._id %>?_method=PUT" class="ui form" method="POST">
+        <table class="ui definition table">
+          <tbody>
+            <tr>
+              <td class="three wide column">Company Name</td>
+              <td>
+                <div class="ui fluid input">
+                  <input type="text" name="plan[company_name]" value="<%= plan.company_name %>">
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>Business Owner</td>
+              <td>
+                <div class="ui fluid input">
+                  <input type="text" name="plan[owner_name]" value="<%= plan.owner_name %>">
+                </div>
+              </td>
+            </tr>        
+            <tr>
+              <td>City</td>
+              <td>
+                <div class="ui fluid input">
+                  <input type="text" name="plan[city]" value="<%= plan.city %>">
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>State</td>
+              <td>
+                <div class="ui fluid input">
+                  <input type="text" name="plan[state]" value="<%= plan.state %>">
+                </div>
+              </td>
+            </tr>        
+            <tr>
+              <td>Zipcode</td>
+              <td>
+                <div class="ui fluid input">
+                  <input type="text" name="plan[zip_code]" value="<%= plan.zip_code %>" pattern="[0-9]{5}" title="Five digit zip code">
+                </div>
+              </td>
+            </tr>
+            </tbody>
+        </table>
+            <tr>
+              <td>Product/Service</td>
+              <td>
+                <div class="ui fluid input">
+                  <input type="text" name="plan[product_or_service]" value="<%= plan.product_or_service %>">
+                </div>
+              </td>
+            </tr>        
+            <tr>
+              <td>Target Customers</td>
+              <td>
+                <div class="ui fluid input">
+                  <input type="text" name="plan[target_customers]" value="<%= plan.target_customers %>">
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>Company Goals</td>
+              <td>
+                <div class="ui fluid input">
+                  <input type="text" name="plan[goals]" value="<%= plan.goals %>">
+                </div>
+              </td>
+            </tr>        
+            <tr>
+              <td>Mission Statement</td>
+              <td>
+                <div class="ui fluid input">
+                  <input type="text" name="plan[mission_statement]" value="<%= plan.mission_statement %>">
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>Principal Members</td>
+              <td>
+                <div class="ui fluid input">
+                  <input type="text" name="plan[principal_members]" value="<%= plan.principal_members %>">
+                </div>
+              </td>
+            </tr>        
+            <tr>
+              <td>Legal Structure</td>
+              <td>
+                <div class="ui fluid input">
+                  <input type="text" name="plan[legal_structure]" value="<%= plan.legal_structure %>">
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>Description of Industry</td>
+              <td>
+                <div class="ui fluid input">
+                  <input type="text" name="plan[industry_description]" value="<%= plan.industry_description %>">
+                </div>
+              </td>
+            </tr>        
+            <tr>
+              <td>Customers</td>
+              <td>
+                <div class="ui fluid input">
+                  <input type="text" name="plan[customers]" value="<%= plan.customers %>">
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>Competitors</td>
+              <td>
+                <div class="ui fluid input">
+                  <input type="text" name="plan[competitors]" value="<%= plan.competitors %>">
+                </div>
+              </td>
+            </tr>        
+            <tr>
+              <td>Advantages over Competition</td>
+              <td>
+                <div class="ui fluid input">
+                  <input type="text" name="plan[advantages_over_competition]" value="<%= plan.advantages_over_competition %>">
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>Relevant Regulations</td>
+              <td>
+                <div class="ui fluid input">
+                  <input type="text" name="plan[regulations]" value="<%= plan.regulations %>">
+                </div>
+              </td>
+            </tr>        
+            <tr>
+              <td>Product/Service</td>
+              <td>
+                <div class="ui fluid input">
+                  <input type="text" name="plan[company_productservice]" value="<%= plan.company_productservice %>">
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>Pricing Structure</td>
+              <td>
+                <div class="ui fluid input">
+                  <input type="text" name="plan[pricing_structure]" value="<%= plan.pricing_structure %>">
+                </div>
+              </td>
+            </tr>        
+            <tr>
+              <td>What Life Cycle?</td>
+              <td>
+                <div class="ui fluid input">
+                  <input type="text" name="plan[life_cycle]" value="<%= plan.life_cycle %>">
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>Intellectual Property Rights</td>
+              <td>
+                <div class="ui fluid input">
+                  <input type="text" name="plan[intellectual_property]" value="<%= plan.intellectual_property %>">
+                </div>
+              </td>
+            </tr>        
+            <tr>
+              <td>Research and Development</td>
+              <td>
+                <div class="ui fluid input">
+                  <input type="text" name="plan[research_and_development]" value="<%= plan.research_and_development %>">
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>Growth Plan</td>
+              <td>
+                <div class="ui fluid input">
+                  <input type="text" name="plan[plan_to_grow]" value="<%= plan.plan_to_grow %>">
+                </div>
+              </td>
+            </tr>        
+            <tr>
+              <td>Communication Plan</td>
+              <td>
+                <div class="ui fluid input">
+                  <input type="text" name="plan[plan_to_communicate]" value="<%= plan.plan_to_communicate %>">
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>Sales Plan</td>
+              <td>
+                <div class="ui fluid input">
+                  <input type="text" name="plan[plan_to_sell]" value="<%= plan.plan_to_sell %>">
+                </div>
+              </td>
+            </tr>        
+          </tbody>
+        </table>
+        <div>
+          <button class="ui large blue button" type="submit">Save Answers</button>
+        </div>
+      </form>
+</div>
+
+<% include ../partials/footer %>

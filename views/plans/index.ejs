@@ -1,0 +1,30 @@
+<% include ../partials/header %>
+
+<!--Show an individual plan-->
+
+<div class="ui container">
+    <h4 class="ui horizontal divider header">
+      <i class="tasks icon"></i>
+      Your Business Plans
+    </h4>
+    
+    <% plans.forEach(function(plan) { %>
+        <div class="ui container segment">
+          <div class="ui three column grid">
+            <div class="four wide column">
+              <h3 style="text-align: center; vertical-align: middle; line-height: 3em"><%= plan.company_name %></h2>
+            </div>
+            <div class="ten wide column">
+              <p><%= plan.product_or_service %></p>
+            </div>
+            <div class="two wide column">
+              <div class="row">
+                <a href="/plans/<%= plan._id %>"><button class="ui blue button">View</button></a>
+              </div>
+            </div>
+          </div>
+        </div>
+    <% }) %>
+</div>
+
+<% include ../partials/footer %>

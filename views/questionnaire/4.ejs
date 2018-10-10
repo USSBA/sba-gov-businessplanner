@@ -1,0 +1,58 @@
+<% include ../partials/header %>
+
+<!--First page, pre-plan has been generated-->
+
+<div class="ui container">
+    <div class="ui segment">
+        <div class="ui blue progress">
+            <div class="bar" style="width: 55%">
+                <div class="progress"></div>
+            </div>
+        </div>    
+        <div class="ui two column very relaxed grid">
+            <div class="column">
+                <h2>Products and Services</h2>
+                <p>Describe in detail what your product or service is and how it will meet the needs of your customers. Explain the benefits of your product or service, the advantages it has over the competition, and its current development stage (e.g., idea, prototype).</p>
+                <h4>What is the life-cycle of your service/product?</h4>
+                In this section, explain where your product is within its life cycle. Is it in development? Are you testing it or building prototypes? Is it already on the market? Has it been on the market for a while?
+                
+                <h4>What copyrights, patents, trademarks or other intellectual property rights do you have for your product/service?</h4>
+                If you have any existing, pending, or anticipated copyright or patent filings, list them here. Also disclose whether any key aspects of a product may be classified as trade secrets.
+                
+                <h4>What research and development activities are you performing or planning?</h4>
+                Outline any R&D activities that you are involved in or are planning. What results of future R&D activities do you expect? Be sure to analyze the R&D efforts of not only your own business, but also of others in your industry.
+
+                <div class="row" style="text-align: center">
+                    <a href="/questionnaire/<%= plan._id %>/3"><button class="ui large blue button" style="margin-top: 1em; position: absolute; bottom: 1rem;"><i class="angle left icon"></i>Previous</button></a>
+                </div>
+            </div>            
+            <div class="column">
+                <form action="/questionnaire/<%= plan._id %>/5/?_method=PUT" class="ui form" method="POST">
+                    <h3>What product or service will your company provide?</h3>
+                    <div class="ui fluid input">
+                        <textarea name="plan[company_productservice]"><%= plan.company_productservice %></textarea>    
+                    </div>
+                    <h3>Describe your pricing structure</h3>
+                    <div class="ui fluid input">
+                        <textarea name="plan[pricing_structure]"><%= plan.pricing_structure %></textarea>
+                    </div>                    
+                    <h3>In which life cycle stage is your product or service?</h3>
+                    <div class="ui fluid input">
+                        <textarea name="plan[life_cycle]"><%= plan.life_cycle %></textarea>
+                    </div>                   
+                    <h3>What intellectual property rights do you have for your product or service?</h3>
+                    <div class="ui fluid input">
+                        <textarea name="plan[intellectual_property]"><%= plan.intellectual_property %></textarea>
+                    </div>                    
+                    <h3>What research and development (R&D) activities are you performing or planning?</h3>
+                    <div class="ui fluid input">
+                        <textarea name="plan[research_and_development]"><%= plan.research_and_development %></textarea>
+                    </div>
+                    <div class="row" style="margin-top: 1em; text-align: center">
+                        <button class="ui large blue button">Next Section<i class="angle right icon"></i></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

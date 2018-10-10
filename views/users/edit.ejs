@@ -1,0 +1,35 @@
+<% include ../partials/header %>
+
+<!--<img class="ui fluid image background" src="/images/background.png">-->
+<div class="background">
+    <div class="ui container">
+        <div class="ui padded segment inverted">
+            <div class="ui two column very relaxed grid">
+                <div class="column">
+                    <form class="ui large form" action="/users/<%= user._id %>?_method=PUT" method="POST">
+                        <label>Username</label>
+                        <input type="text" name="user[username]" value="<%= user.username %>">
+                        <label>Password</label>
+                        <input type="password" name="user[password]" value="" pattern=".{5,20}" required title="5 to 20 characters">
+                        <!--<label>Faction</label>-->
+                        <!--<select name="user[faction]">-->
+                        <!--  <option value="<%= user.faction %>"><%= user.faction %></option>-->
+                        <!--  <option value="New Conglomerate">New Conglomerate</option>-->
+                        <!--  <option value="Terran Republic">Terran Republic</option>-->
+                        <!--  <option value="Vanu Sovereignty">Vanu Sovereignty</option>-->
+                        <!--  <option value="Undeclared">Undeclared</option>-->
+                        <!--</select>-->
+                        <input class= "ui fluid large submit button" type="submit" style="margin-top: 20px" value="Update Profile">
+                    </form>
+                </div>
+                <div class="column">
+                    <div class="image">
+                        <img src="<%= user.avatar %>">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<% include ../partials/footer %>

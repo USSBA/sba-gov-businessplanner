@@ -1,0 +1,29 @@
+<% include ../partials/header %>
+
+<!--<img class="ui fluid image background" src="/images/background.png">-->
+<div class="background">
+    <div class="ui container">
+        <div class="ui padded segment inverted">
+            <div class="ui two column very relaxed grid">
+                <div class="column">
+                    <h1><%= user.username %></h1>
+                    <h3><%= user.faction %></h2>
+
+                    <div class="ui buttons">
+                        <a href="/users/<%= user._id %>/edit"><button class="ui fluid large submit button yellow">Modify</button></a>
+                    </div>
+                    <div class="ui buttons">
+                        <a href="/users/logout"><button class="ui fluid large submit button gray">Logout</button></a>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="image">
+                        <img src="<%= user.avatar %>">
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </div>
+</div>
+
+<% include ../partials/footer %>

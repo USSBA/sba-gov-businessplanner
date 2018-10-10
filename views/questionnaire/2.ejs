@@ -1,0 +1,65 @@
+<% include ../partials/header %>
+
+<!--First page, pre-plan has been generated-->
+
+<div class="ui container">
+    <div class="ui segment">
+        <div class="ui blue progress">
+            <div class="bar" style="width: 25%">
+                <div class="progress"></div>
+            </div>
+        </div>    
+        <div class="ui two column very relaxed grid">
+            <div class="column">
+                <h2>Company Description</h2>
+                <p>Provide a high-level review of your business that will help readers and potential investors understand your business model. Elements include:</p>
+                <ul>
+                    <li>Key employees of your business, such as the CEO, President and Vice President</li>
+                    <li>Mission statement</li>
+                    <li>Details about the products or services your business will provided</li>
+                    <li>Qualities that will make your business a success</li>
+                </ul>
+                
+                <h4>What is your mission statement?</h4>
+                <p>Your mission statement is an expression of your company's guiding philosophy, a high-level corporate objective or a set of values that led you to go into business.</p>
+
+                <h4>Who are the principal members of your company and what are their roles?</h4>
+                <p>Include relevant information about your company's management team, their credentials, and how tasks and responsibilities are distributed throughout your businesses managers and staff.</p>
+
+                <h4>What is the legal structure of your company?</h4>
+                <p>Provide information about the legal structure of your business. The different legal business structures are as follows:</p>
+                <ul>
+                    <li>Sole Proprietorship</li>
+                    <li>General Partnership</li>
+                    <li>Limited Liability Partnership</li>
+                    <li>C-Corporation</li>
+                    <li>S-Corporation</li>
+                    <li>Limited Liability Corporation (LLC)</li>
+                </ul>
+
+                <div class="row" style="text-align: center">
+                    <a href="/questionnaire/<%= plan._id %>/1"><button class="ui large blue button" style="margin-top: 1em; position: absolute; bottom: 1rem;"><i class="angle left icon"></i>Previous</button></a>
+                </div>
+            </div>            
+            <div class="column">
+                <form action="/questionnaire/<%= plan._id %>/3/?_method=PUT" class="ui form" method="POST">
+                    <h3>What is your mission statement?</h3>
+                    <div class="ui fluid input">
+                        <textarea name="plan[mission_statement]"><%= plan.mission_statement %></textarea>    
+                    </div>
+                    <h3>Who are the principal members of your company and what are their roles?</h3>
+                    <div class="ui fluid input">
+                        <textarea name="plan[principal_members]"><%= plan.principal_members %></textarea>
+                    </div>                    
+                    <h3>What is the legal structure of your company?</h3>
+                    <div class="ui fluid input">
+                        <textarea name="plan[legal_structure]"><%= plan.legal_structure %></textarea>
+                    </div>
+                    <div class="row" style="margin-top: 1em; text-align: center">
+                        <button class="ui large blue button">Next Section<i class="angle right icon"></i></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,44 @@
+<% include ../partials/header %>
+
+<!--First page, pre-plan has been generated-->
+
+<div class="ui container">
+    <div class="ui segment">
+        <div class="ui blue progress">
+            <div class="bar" style="width: 85%">
+                <div class="progress"></div>
+            </div>
+        </div>    
+        <div class="ui two column very relaxed grid">
+            <div class="column">
+                <h2>Financial Projections</h2>
+                <p>This section is the most important for investors and lenders because it shows that your company is built on a solid foundation. It also illustrates how your business will be able to meet financial obligations, while maintaining a positive cash flow balance.</p>
+
+                <p>If you do not have any financial information prepared, research industry statistics to estimate what the profits and costs will be for your company. If you still need assistance you can contact a local Small Business Development Center (SBDC) or SCORE, two of SBA's resource partners, through the SBA.gov Local Assistance tool. They are located across the country and provide free business counseling and answers.</p>
+                
+                <p>This section includes four spreadsheets that you can download and use.</p>
+            
+
+                <div class="row" style="text-align: center">
+                    <a href="/questionnaire/<%= plan._id %>/5"><button class="ui large blue button" style="margin-top: 1em; position: absolute; bottom: 1rem;"><i class="angle left icon"></i>Previous</button></a>
+                </div>
+            </div>            
+            <div class="column">
+                <form action="/plans/<%= plan._id %>/edit" class="ui form" method="GET">
+                    <h3>Downloadable links to Spreadsheets will appear here</h3>
+                     <h4>Profit and Loss Projection</h4>
+                Shows your company's ability to generate a net profit, or your bottom line. This is also known as an income statement.
+                <h4>Cash Flow Projection</h4>
+                Displays the operating, investing, and financing activities of your company by detailing the money coming in to and going out of your business
+                <h4>Projected Balance Sheet</h4>
+                Estimates resources your business will need, where they will be needed, and how they will be financed.
+                <h4>Breakeven Analysis</h4>
+                Shows when your business will be able to cover all of its expenses and begin making a profit.
+                    <div class="row" style="margin-top: 1em; text-align: center">
+                        <button class="ui large blue button">Next Section<i class="angle right icon"></i></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

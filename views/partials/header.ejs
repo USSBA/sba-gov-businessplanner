@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Small Business Planner</title>
+    <link rel="stylesheet" type="text/css" href="/semantic.min.css">
+    <script
+      src="https://code.jquery.com/jquery-3.1.1.min.js"
+      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+      crossorigin="anonymous"></script>
+    <script src="/semantic.min.js"></script>
+  </head>
+<body>
+    <div class="ui large secondary menu">
+        <div class="ui container">
+            <div class="left item">
+                <a href="https://www.sba.gov/business-guide/plan-your-business/write-your-business-plan">
+                    SBA Logo
+                    <!--<img class="ui middle aligned medium image" src="SBA-Logo-Horizontal.png" style="height: auto; width: 15rem">-->
+                </a>
+                <a class="item" href="/">
+                    Business Planner
+                </a>
+            </div>
+            <div class="right item">
+                <% if(!currentUser) { %>
+                    <a class="item" href="/users/login">
+                        Login
+                    </a>
+                <% } else { %>
+                    <a class="item" href="/questionnaire">
+                        Get Started
+                    </a>                    
+                    <a class="item" href="/plans/new">
+                        Create New Plan
+                    </a>
+                    <a class="item" href="/plans">
+                        View Plans
+                    </a>
+                    <a class="item" href="/users/logout">
+                        Logout
+                    </a>
+                <% } %>
+            </div>
+        </div>
+    </div>

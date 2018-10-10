@@ -1,0 +1,56 @@
+<% include ../partials/header %>
+
+<!--First page, pre-plan has been generated-->
+
+<div class="ui container">
+    <div class="ui segment">
+        <div class="ui blue progress">
+            <div class="bar" style="width: 70%">
+                <div class="progress"></div>
+            </div>
+        </div>    
+        <div class="ui two column very relaxed grid">
+            <div class="column">
+                <h2>Marketing and Sales</h2>
+                <p>Describe how your company will focus on its customers through its marketing and sales strategies. Then, show how your company will reach its customers and how it will sell its products. Elements include:</p>
+                <ul>
+                    <li>How your company plans to grow</li>
+                    <li>How your company is going to communicate with customers</li>
+                    <li>How you will advertise your product or service</li>
+                </ul>
+                
+                <h4>What is your growth strategy for your company?</h4>
+                In this section, describe your overall strategy for expanding your business and increasing sales. Depending on your business, a growth strategy could include franchising, acquisitions, or new product development.
+                
+                <h4>What are the distribution channels that you will use to market your company?</h4>
+                List how your business will distribute its products or services to customers. Questions to consider: Will you operate in a supply chain with manufacturers, distributors or retailers? What are your dependencies to get your product on the market? Do you have an internal sales team? Note that distribution channels will vary greatly depending on your product.
+                
+                <h4>What is your product?</h4>
+                This section is your opportunity to articulate a communications strategy for your business. Depending on your target customer group, you may choose to focus communication strategy on any of the following: print advertising; strategic partnerships and sponsorships; social media; search engine optimization, or word-of-mouth promotion. Most solid communication strategies include a mix of these and other promotion methods. Be sure to consider your customer group and the ways in which they consume information.
+                
+                <div class="row" style="text-align: center">
+                    <a href="/questionnaire/<%= plan._id %>/4"><button class="ui large blue button" style="margin-top: 1em; position: absolute; bottom: 1rem;"><i class="angle left icon"></i>Previous</button></a>
+                </div>
+            </div>            
+            <div class="column">
+                <form action="/questionnaire/<%= plan._id %>/6/?_method=PUT" class="ui form" method="POST">
+                    <h3>What is your plan to grow your company?</h3>
+                    <div class="ui fluid input">
+                        <textarea name="plan[plan_to_grow]"><%= plan.plan_to_grow %></textarea>    
+                    </div>
+                    <h3>How will you communicate with your customers?</h3>
+                    <div class="ui fluid input">
+                        <textarea name="plan[plan_to_communicate]"><%= plan.plan_to_communicate %></textarea>
+                    </div>                    
+                    <h3>How will you sell your product or service?</h3>
+                    <div class="ui fluid input">
+                        <textarea name="plan[plan_to_sell]"><%= plan.plan_to_sell %></textarea>
+                    </div>                   
+                    <div class="row" style="margin-top: 1em; text-align: center">
+                        <button class="ui large blue button">Next Section<i class="angle right icon"></i></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

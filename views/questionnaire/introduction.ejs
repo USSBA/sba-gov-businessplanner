@@ -1,0 +1,65 @@
+<% include ../partials/header %>
+
+<!--First page, pre-plan has been generated-->
+
+<div class="ui container">
+    <div class="ui segment">
+        <div class="ui two column very relaxed grid">
+            <div class="column">
+                <p>What are the key elements of a business plan? From market analysis to your company financials, this guide walks you through the essential components of your plan, including how to develop a funding request.</p>
+                <ul>
+                    <li><h4>Executive Summary</h4></li>
+                    <p>Your executive summary is a snapshot of your business plan as a whole and touches on your company profile and goals. Learn what to include below.</p>
+                    <li><h4>Market Analysis</h4></li>
+                    <p>Before launching your business, it is essential for you to research your business industry, market and competitors.</p>
+                    <li><h4>Company Description</h4></li>
+                    <p>Your company description provides information on what you do, what differentiates your business from others, and the markets your business serves.</p>
+                    <li><h4>Organization & Management</h4></li>
+                    <p>Every business is structured differently. Find out the best organization and management structure for your business.</p>
+                    <li><h4>Marketing & Sales</h4></li>
+                    <p>How do you plan to market your business? What is your sales strategy? Read more about how to include this information in your plan.</p>
+                    <li><h4>Service or Product Line</h4></li>
+                    <p>What do you sell? How does it benefit your customers? What is the product lifecycle? Get tips on how to tell the story about your product or service.</p>
+                    <li><h4>Funding Request</h4></li>
+                    <p>If you are seeking funding for your business, find out about the necessary information you should include in your plan.</p>
+                    <li><h4>Financial Projection</h4></li>
+                    <p>If you need funding, providing financial projections to back up your request is critical. Find out what information you need to include in your financial projections for your small business.</p>
+                    <li><h4>Appendix</h4></li>
+                    <p>An appendix is optional, but a useful place to include information such as resumes, permits and leases. Find additional information you should include in your appendix.</p>
+                </ul>
+            </div>
+            <div class="column">
+                <form action="/questionnaire" class="ui form" method="POST">
+                    <p>Fill out the information here to create the cover page for your business plan.</p>
+                    <h3>What is the Company's Name?</h3>
+                    <div class="ui fluid input">
+                        <input type="text" name="plan[company_name]" required>
+                    </div>
+                    <h3>Who is the primary Business Owner?</h3>
+                    <div class="ui fluid input">
+                        <input type="text" name="plan[owner_name]">
+                    </div>
+                    <h3>In what City will this company start?</h3>
+                    <div class="ui fluid input">
+                        <input type="text" name="plan[city]">
+                    </div>
+                    <h3>In what State will this company start?</h3>
+                    <div class="ui fluid input">
+                        <input type="text" name="plan[state]">
+                    </div>
+                    <h3>What will the company's Zipcode be?</h3>
+                    <div class="ui fluid input">
+                        <input type="text" name="plan[zip_code]" pattern="[0-9]{5}" title="Five digit zip code">
+                    </div>
+                    <div class="row" style="text-align: center">
+                        <button class="ui huge blue button" type="submit" style="margin-top: 1em">Start New Plan</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+        <div class="ui vertical divider">
+            and
+        </div>
+    </div>
+</div>

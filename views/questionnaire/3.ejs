@@ -1,0 +1,58 @@
+<% include ../partials/header %>
+
+<!--First page, pre-plan has been generated-->
+
+<div class="ui container">
+    <div class="ui segment">
+        <div class="ui blue progress">
+            <div class="bar" style="width: 40%">
+                <div class="progress"></div>
+            </div>
+        </div>    
+        <div class="ui two column very relaxed grid">
+            <div class="column">
+                <h2>Market Research</h2>
+                <p>Provide detailed information to show that you have a solid understanding of the industry within which your business will operate. If you have any further questions it may be useful talking to a mentor who could offer you specific guidance.</p>
+                <p>We recommend including a description of the target customer for your business, a competitive analysis, and any legal requirements impacting your company and industry.</p>
+                <h4>What is your industry?</h4>
+                In this section, you should provide more detail about the characteristics of your industry and the particular market segments you will be targeting. It may also be helpful to reference your or an expert's analysis of growth trends or changes in your broader industry and how your business is prepared for those changes.
+
+                <h4>Who are your customers?</h4>
+                This section allows you to give a profile of your targeted customer groups and connect their needs to your product's value proposition. Explaining your strategy for pursuing a particular customer group will help your market research come across as well-reasoned.
+                
+                <h4>What regulations, if any, apply to your company?</h4>
+                Cite any customer or government regulatory requirements affecting your business, and how you'll comply. It will also be helpful to cite any operational or cost impact the compliance process will have on your business.
+                <div class="row" style="text-align: center">
+                    <a href="/questionnaire/<%= plan._id %>/2"><button class="ui large blue button" style="margin-top: 1em; position: absolute; bottom: 1rem;"><i class="angle left icon"></i>Previous</button></a>
+                </div>
+            </div>            
+            <div class="column">
+                <form action="/questionnaire/<%= plan._id %>/4/?_method=PUT" class="ui form" method="POST">
+                    <h3>Describe your industry</h3>
+                    <div class="ui fluid input">
+                        <textarea name="plan[industry_description]"><%= plan.industry_description %></textarea>    
+                    </div>
+                    <h3>Describe your customers</h3>
+                    <div class="ui fluid input">
+                        <textarea name="plan[customers]"><%= plan.customers %></textarea>
+                    </div>                    
+                    <h3>Who are your competitors?</h3>
+                    <div class="ui fluid input">
+                        <textarea name="plan[competitors]"><%= plan.competitors %></textarea>
+                    </div>                   
+                    <h3>What advantages do you have over your competition?</h3>
+                    <div class="ui fluid input">
+                        <textarea name="plan[advantages_over_competition]"><%= plan.advantages_over_competition %></textarea>
+                    </div>                    
+                    <h3>What regulations apply to your company?</h3>
+                    <div class="ui fluid input">
+                        <textarea name="plan[regulations]"><%= plan.regulations %></textarea>
+                    </div>
+                    <div class="row" style="margin-top: 1em; text-align: center">
+                        <button class="ui large blue button">Next Section<i class="angle right icon"></i></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

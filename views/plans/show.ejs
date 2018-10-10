@@ -1,0 +1,123 @@
+<% include ../partials/header %>
+
+<!--Show an individual plan-->
+
+<div class="ui container segment">
+    <div class="ui right close rail" style="margin-top: 11em">
+        <a href="/plans/<%= plan._id %>/edit"><button class="ui large blue button">Edit Answers</button></a>
+        <form action="/plans/<%= plan._id %>/?_method=DELETE" method="POST">
+          <button class="ui large red button" style="margin-top: 1em">Delete Plan</button>
+        </form>
+    </div>
+
+    <h4 class="ui horizontal divider header">
+      Business Plan Review
+    </h4>
+    <p>Please take a moment to review your answers below. You can always return and modify this plan later.  You can print this page if you would like an easy way to reference your plan.</p>
+    <h4 class="ui horizontal divider header">
+      <i class="briefcase icon"></i>
+      Your Answers
+    </h4>
+    <table class="ui definition table">
+      <tbody>
+        <tr>
+          <td class="three wide column">Company Name</td>
+          <td><%= plan.company_name %></td>
+        </tr>
+        <tr>
+          <td>Business Owner</td>
+          <td><%= plan.owner_name %></td>
+        </tr>        
+        <tr>
+          <td>City</td>
+          <td><%= plan.city %></td>
+        </tr>
+        <tr>
+          <td>State</td>
+          <td><%= plan.state %></td>
+        </tr>        
+        <tr>
+          <td>Zipcode</td>
+          <td><%= plan.zip_code %></td>
+        </tr>
+        <tr>
+          <td>Product/Service</td>
+          <td><%= plan.product_or_service %></td>
+        </tr>        
+        <tr>
+          <td>Target Customers</td>
+          <td><%= plan.target_customers %></td>
+        </tr>
+        <tr>
+          <td>Company Goals</td>
+          <td><%= plan.goals %></td>
+        </tr>        
+        <tr>
+          <td>Mission Statement</td>
+          <td><%= plan.mission_statement %></td>
+        </tr>
+        <tr>
+          <td>Principal Members</td>
+          <td><%= plan.principal_members %></td>
+        </tr>        
+        <tr>
+          <td>Legal Structure</td>
+          <td><%= plan.legal_structure %></td>
+        </tr>
+        <tr>
+          <td>Description of Industry</td>
+          <td><%= plan.industry_description %></td>
+        </tr>        
+        <tr>
+          <td>Customers</td>
+          <td><%= plan.customers %></td>
+        </tr>
+        <tr>
+          <td>Competitors</td>
+          <td><%= plan.competitors %></td>
+        </tr>        
+        <tr>
+          <td>Advantages over Competition</td>
+          <td><%= plan.advantages_over_competition %></td>
+        </tr>
+        <tr>
+          <td>Relevant Regulations</td>
+          <td><%= plan.regulations %></td>
+        </tr>        
+        <tr>
+          <td>Product/Service</td>
+          <td><%= plan.company_productservice %></td>
+        </tr>
+        <tr>
+          <td>Pricing Structure</td>
+          <td><%= plan.pricing_structure %></td>
+        </tr>        
+        <tr>
+          <td>What Life Cycle?</td>
+          <td><%= plan.life_cycle %></td>
+        </tr>
+        <tr>
+          <td>Intellectual Property Rights</td>
+          <td><%= plan.intellectual_property %></td>
+        </tr>        
+        <tr>
+          <td>Research and Development</td>
+          <td><%= plan.research_and_development %></td>
+        </tr>
+        <tr>
+          <td>Growth Plan</td>
+          <td><%= plan.plan_to_grow %></td>
+        </tr>        
+        <tr>
+          <td>Communication Plan</td>
+          <td><%= plan.plan_to_communicate %></td>
+        </tr>
+        <tr>
+          <td>Sales Plan</td>
+          <td><%= plan.plan_to_sell %></td>
+        </tr>        
+      </tbody>
+    </table>
+</div>
+
+<% include ../partials/footer %>
